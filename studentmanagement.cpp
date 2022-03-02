@@ -47,40 +47,54 @@ else{
 
 
 
-void show(){
- for (int i = 0; i < total; i++)
- {
-    cout<<"\n\nData of Students: "<<i+1<<endl<<endl;
-    cout<<"Name: "<<arr1[i]<<endl;
-    cout<<"Roll No.: "<<arr2[i]<<endl;
-    cout<<"Course: "<<arr3[i]<<endl;
-    cout<<"Class: "<<arr4[i]<<endl;
-    cout<<"Contact: "<<arr5[i]<<endl;
+void show()
+{
 
- }
+   if (total == 0)
+   {
+      cout<<"\nNo data to show\n";
+   }
+   else
+   { 
+     for (int i = 0; i < total; i++)
+     {
+        cout<<"\n\nData of Students: "<<i+1<<endl<<endl;
+        cout<<"Name: "<<arr1[i]<<endl;
+        cout<<"Roll No.: "<<arr2[i]<<endl;
+        cout<<"Course: "<<arr3[i]<<endl;
+        cout<<"Class: "<<arr4[i]<<endl;
+        cout<<"Contact: "<<arr5[i]<<endl;
+     }
  
+   }
 }
 
 
 
 void search()
 {
-   string rollno;
-   cout<<"\nEnter the roll no. of the student you want to search: ";
-   cin>>rollno;
-   for(int i = 0; i<total; i++)
+   if (total == 0)
    {
-      if(rollno == arr2[i])
-      {
-         cout<<"\n\nData of Students: "<<i+1<<endl<<endl;
-         cout<<"Name: "<<arr1[i]<<endl;
-         cout<<"Roll No.: "<<arr2[i]<<endl;
-         cout<<"Course: "<<arr3[i]<<endl;
-         cout<<"Class: "<<arr4[i]<<endl;
-         cout<<"Contact: "<<arr5[i]<<endl;
+      cout<<"\nNo data to show\n";
+   }
+   else
+   { 
+     string rollno;
+     cout<<"\nEnter the roll no. of the student you want to search: ";
+     cin>>rollno;
+     for(int i = 0; i<total; i++)
+     {
+        if(rollno == arr2[i])
+        {
+           cout<<"\n\nData of Students: "<<i+1<<endl<<endl;
+           cout<<"Name: "<<arr1[i]<<endl;
+           cout<<"Roll No.: "<<arr2[i]<<endl;
+           cout<<"Course: "<<arr3[i]<<endl;
+           cout<<"Class: "<<arr4[i]<<endl;
+           cout<<"Contact: "<<arr5[i]<<endl;
+        }
       }
-      
-    }
+   }
 
 }
 
@@ -88,6 +102,13 @@ void search()
 
 
 void update(){
+
+   if (total == 0)
+   {
+      cout<<"\nNo data to show\n";
+   }
+   else
+   { 
 
 string rollno;
    cout<<"\nEnter the roll no. of the student you want to search: ";
@@ -121,10 +142,16 @@ string rollno;
       
     }
 
-
+   }
 }
 
 void deleterecord(){
+   if (total == 0)
+   {
+      cout<<"\nNo data to show\n";
+   }
+   else
+   { 
   int s, j;
   cout<<"Press 1 to delete all records"<<endl;
   cout<<"Press 2 to delete a specific record"<<endl;
@@ -153,6 +180,7 @@ void deleterecord(){
       }
    }    
 
+}
 }
 
 
